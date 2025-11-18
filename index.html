@@ -1,129 +1,279 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Asistente Virtual Tributario</title>
 
-<style>
-  body { font-family: 'Segoe UI', sans-serif; background: #f9fafb; margin: 0; color: #333; }
-  header { background: #2b6cb0; color: white; padding: 15px; text-align: center; font-size: 1.4em; font-weight: bold; }
-  nav { display: flex; flex-wrap: wrap; justify-content: center; background: #edf2f7; padding: 10px; }
-  nav button { margin: 5px; padding: 10px 15px; border: none; background: #2b6cb0; color: white; border-radius: 5px; cursor: pointer; transition: background 0.3s; flex: 1 1 auto; min-width: 120px; }
-  nav button:hover { background: #1a4e8a; }
-  section { display: none; padding: 20px; max-width: 900px; margin: auto; }
-  section.active { display: block; }
-  h2 { color: #2b6cb0; }
-  #chatbox { border: 1px solid #ccc; border-radius: 8px; padding: 10px; background: #fff; height: 300px; overflow-y: auto; margin-bottom: 10px; }
-  .msg { margin: 5px 0; padding: 8px; border-radius: 5px; max-width: 70%; word-wrap: break-word; }
-  .user { background: #bee3f8; margin-left: auto; text-align: right; }
-  .bot { background: #e2e8f0; margin-right: auto; text-align: left; }
-  #chatControls { display: flex; gap: 8px; }
-  #userInput { flex: 1; padding: 8px; border: 1px solid #ccc; border-radius: 5px; }
-  #sendBtn { padding: 8px 12px; background: #2b6cb0; color: white; border: none; border-radius: 5px; cursor: pointer; }
-  #sendBtn:hover { background: #1a4e8a; }
-  ul { list-style: none; padding: 0; }
-  li { margin: 8px 0; }
-  input[type=checkbox] { margin-right: 8px; }
-  @media (max-width: 600px) {
-    header { font-size: 1.2em; }
-    nav { flex-direction: column; }
-    nav button { min-width: unset; width: 100%; }
-    #chatbox { height: 200px; }
-  }
-</style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asistente Virtual Tributario</title>
+
+  <!-- FullCalendar CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
+
+  <!-- FullCalendar JS -->
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9fafb;
+      margin: 0;
+      color: #333;
+    }
+
+    header {
+      background: #2b6cb0;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-size: 1.4em;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background: #edf2f7;
+      padding: 10px;
+    }
+
+    nav button {
+      margin: 5px;
+      padding: 10px 15px;
+      border: none;
+      background: #2b6cb0;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+      flex: 1 1 auto;
+      min-width: 120px;
+    }
+
+    nav button:hover {
+      background: #1a4e8a;
+    }
+
+    section {
+      display: none;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    h2 {
+      color: #2b6cb0;
+    }
+
+    #chatbox {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 10px;
+      background: #fff;
+      height: 300px;
+      overflow-y: auto;
+      margin-bottom: 10px;
+    }
+
+    .msg {
+      margin: 5px 0;
+      padding: 8px;
+      border-radius: 5px;
+      max-width: 70%;
+      word-wrap: break-word;
+    }
+
+    .user {
+      background: #bee3f8;
+      margin-left: auto;
+      text-align: right;
+    }
+
+    .bot {
+      background: #e2e8f0;
+      margin-right: auto;
+      text-align: left;
+    }
+
+    #chatControls {
+      display: flex;
+      gap: 8px;
+    }
+
+    #userInput {
+      flex: 1;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    #sendBtn {
+      padding: 8px 12px;
+      background: #2b6cb0;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #sendBtn:hover {
+      background: #1a4e8a;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 8px 0;
+    }
+
+    input[type=checkbox] {
+      margin-right: 8px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        font-size: 1.2em;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+
+      nav button {
+        min-width: unset;
+        width: 100%;
+      }
+
+      #chatbox {
+        height: 200px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<header>🤖 Asistente Virtual Tributario</header>
+  <header>🤖 Asistente Virtual Tributario</header>
 
-<nav>
-  <button onclick="showTab('recordatorios')">📅 Recordatorios</button>
-  <button onclick="showTab('faq')">❓ Preguntas</button>
-  <button onclick="showTab('checklist')">✅ Checklist</button>
-  <button onclick="showTab('chat')">💬 Chat</button>
-</nav>
+  <nav>
+    <button onclick="showTab('recordatorios')">📅 Recordatorios</button>
+    <button onclick="showTab('faq')">❓ Preguntas</button>
+    <button onclick="showTab('checklist')">✅ Checklist</button>
+    <button onclick="showTab('chat')">💬 Chat</button>
+  </nav>
 
-<section id="recordatorios" class="active">
-  <h2>Recordatorios Tributarios</h2>
-  <p>📌 Retención Octubre: vence el <b>10 de Noviembre</b>.</p>
-  <p>📌 ICA Bimestre 5: vence el <b>15 de Diciembre</b>.</p>
-</section>
+  <section id="recordatorios" class="active">
+    <h2>Recordatorios Tributarios</h2>
+    <div id="calendar"></div>
+  </section>
 
-<section id="faq">
-  <h2>Preguntas Frecuentes</h2>
-  <p><b>¿Cuándo debo pagar ICA?</b> → Cada bimestre según calendario oficial.</p>
-  <p><b>¿Qué pasa si me atraso?</b> → La DIAN puede imponer sanciones económicas.</p>
-</section>
+  <section id="faq">
+    <h2>Preguntas Frecuentes</h2>
+    <p><b>¿Cuándo debo pagar ICA?</b> → Cada bimestre según calendario oficial.</p>
+    <p><b>¿Qué pasa si me atraso?</b> → La DIAN puede imponer sanciones económicas.</p>
+  </section>
 
-<section id="checklist">
-  <h2>Checklist ICA</h2>
-  <ul>
-    <li><input type="checkbox"> Revisar ingresos del periodo</li>
-    <li><input type="checkbox"> Calcular retención en la fuente</li>
-    <li><input type="checkbox"> Generar recibo oficial</li>
-    <li><input type="checkbox"> Presentar declaración en la DIAN</li>
-  </ul>
-</section>
+  <section id="checklist">
+    <h2>Checklist ICA</h2>
+    <ul>
+      <li><input type="checkbox"> Revisar ingresos del periodo</li>
+      <li><input type="checkbox"> Calcular retención en la fuente</li>
+      <li><input type="checkbox"> Generar recibo oficial</li>
+      <li><input type="checkbox"> Presentar declaración en la DIAN</li>
+    </ul>
+  </section>
 
-<section id="chat">
-  <h2>Mini Chat Tributario</h2>
-  <div id="chatbox"></div>
-  <div id="chatControls" class="form-control">
-    <input type="text" id="userInput" placeholder="Escribe tu pregunta...">
-    <button id="sendBtn">Enviar</button>
-  </div>
-</section>
+  <section id="chat">
+    <h2>Mini Chat Tributario</h2>
+    <div id="chatbox"></div>
+    <div id="chatControls" class="form-control">
+      <input type="text" id="userInput" placeholder="Escribe tu pregunta...">
+      <button id="sendBtn">Enviar</button>
+    </div>
+  </section>
 
-<script>
-let respuestas = {};
+  <script>
+    let respuestas = {};
 
-// Cargar archivo JSON externo
-fetch("respuestas.json")
-  .then(response => response.json())
-  .then(data => { respuestas = data; })
-  .catch(err => console.error("Error cargando respuestas:", err));
+    // Cargar archivo JSON externo
+    fetch("respuestas.json")
+      .then(response => response.json())
+      .then(data => { respuestas = data; })
+      .catch(err => console.error("Error cargando respuestas:", err));
 
-function showTab(tabId) {
-  document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
-  document.getElementById(tabId).classList.add("active");
-}
-
-// Función para enviar mensaje
-function enviarMensaje() {
-  const input = document.getElementById("userInput");
-  const pregunta = input.value.toLowerCase();
-  if (!pregunta) return;
-
-  const chatbox = document.getElementById("chatbox");
-  chatbox.innerHTML += `<div class="msg user">${input.value}</div>`;
-
-  let respuesta = "Lo siento, no tengo información sobre eso.";
-  for (let clave in respuestas) {
-    if (pregunta.includes(clave)) {
-      respuesta = respuestas[clave];
-      break;
+    function showTab(tabId) {
+      document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+      document.getElementById(tabId).classList.add("active");
     }
-  }
 
-  chatbox.innerHTML += `<div class="msg bot">${respuesta}</div>`;
-  chatbox.scrollTop = chatbox.scrollHeight;
+    // Función para enviar mensaje
+    function enviarMensaje() {
+      const input = document.getElementById("userInput");
+      const pregunta = input.value.toLowerCase();
+      if (!pregunta) return;
 
-  input.value = "";
-}
+      const chatbox = document.getElementById("chatbox");
+      chatbox.innerHTML += `<div class="msg user">${input.value}</div>`;
 
-// Click en el botón
-document.getElementById("sendBtn").addEventListener("click", enviarMensaje);
+      let respuesta = "Lo siento, no tengo información sobre eso.";
+      for (let clave in respuestas) {
+        if (pregunta.includes(clave)) {
+          respuesta = respuestas[clave];
+          break;
+        }
+      }
 
-// Presionar Enter en el input
-document.getElementById("userInput").addEventListener("keydown", function(event) {
-  if (event.key === "Enter") {
-    event.preventDefault(); // evita que se envíe un formulario o se haga salto de línea
-    enviarMensaje();
-  }
-});
-</script>
+      chatbox.innerHTML += `<div class="msg bot">${respuesta}</div>`;
+      chatbox.scrollTop = chatbox.scrollHeight;
 
+      input.value = "";
+    }
+
+    // Click en el botón
+    document.getElementById("sendBtn").addEventListener("click", enviarMensaje);
+
+    // Presionar Enter en el input
+    document.getElementById("userInput").addEventListener("keydown", function (event) {
+      if (event.key === "Enter") {
+        event.preventDefault(); // evita que se envíe un formulario o se haga salto de línea
+        enviarMensaje();
+      }
+    });
+  </script>
+
+  <script>
+    // Lista de eventos tributarios
+    const eventosTributarios = [
+      { title: 'Retención Octubre', start: '2025-11-10' },
+      { title: 'ICA Bimestre 5', start: '2025-12-15' },
+      { title: 'Declaración IVA', start: '2025-11-20' }
+    ];
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const calendarEl = document.getElementById('calendar');
+      const calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        locale: 'es', // idioma español
+        headerToolbar: {
+          left: 'prev,next today',
+          center: 'title',
+          right: 'dayGridMonth,listMonth'
+        },
+        events: eventosTributarios,
+        eventColor: '#2b6cb0', // color de los eventos
+        eventTextColor: '#fff'
+      });
+      calendar.render();
+    });
+  </script>
 
 </body>
+
 </html>
