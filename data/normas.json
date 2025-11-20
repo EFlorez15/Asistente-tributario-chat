@@ -1,0 +1,43 @@
+[
+    {
+        "titulo": "Ley 1819 de 2016",
+        "descripcion": "Reforma tributaria estructural que modificó el Estatuto Tributario.",
+        "link": "https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=79140"
+    },
+    {
+        "titulo": "Ley 1314 de 2009 — Contabilidad e información financiera",
+        "descripcion": "Normas contables y financieras para efectos tributarios (NIIF).",
+        "link": "https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=36833"
+    },
+    {
+        "titulo": "Resolución 000114 de 2020",
+        "descripcion": "Reglamenta la facturación electrónica en Colombia.",
+        "link": "https://www.dian.gov.co/normatividad/Normatividad/Resoluci%C3%B3n%20000114%20de%2021-12-2020.pdf"
+    },
+    {
+        "titulo": "Estatuto Tributario (E.T.)",
+        "descripcion": "Normas generales del sistema tributario.",
+        "link": "https://estatuto.co/"
+    },
+    {
+        "titulo": "Ley 1943 de 2018 — Financiamiento",
+        "descripcion": "Simplificación, régimen simple, retención.",
+        "link": "https://www.suin-juriscol.gov.co/viewDocument.asp?id=30036049"
+    },
+    
+    {
+        "titulo": "Resolución 000042 de 2020 — Facturación Electrónica",
+        "descripcion": "Factura electrónica, requisitos y validación previa.",
+        "link": "https://normograma.dian.gov.co/dian/compilacion/docs/resolucion_dian_0042_2020.htm"
+    },
+    {
+        "titulo": "Resolución 000098 de 2020 — Documento Soporte",
+        "descripcion": "Documento soporte con no obligados a facturar.",
+        "link": "https://www.dian.gov.co/normatividad/Normatividad/Resoluci%C3%B3n%20000098%20de%2028-10-2020.pdf"
+    },
+    {
+        "titulo": "Decreto 1625 de 2016",
+        "descripcion": "Compilación de normas en materia tributaria.",
+        "link": "https://normograma.dian.gov.co/dian/compilacion/docs/decreto_1625_2016.htm"
+    }
+]

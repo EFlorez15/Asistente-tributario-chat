@@ -1,0 +1,50 @@
+<h2>🧮 Calculadora de Retención</h2>
+
+<form id="calcForm">
+  <label for="tipo">Tipo de pago:</label>
+  <select id="tipo" required>
+    <option value="honorarios">Honorarios</option>
+    <option value="servicios">Servicios</option>
+    <option value="arrendamientos">Arrendamientos</option>
+  </select>
+
+  <label for="unidad">Unidad base:</label>
+  <select id="unidad" required>
+    <option value="COP">COP</option>
+    <option value="UVT">UVT</option>
+  </select>
+
+  <label for="base">Base gravable:</label>
+  <input type="number" id="base" required>
+
+  <label for="excep">Excepción (opcional):</label>
+  <input type="text" id="excep" placeholder="ej: exonerado">
+
+  <button type="submit">Calcular</button>
+  <button type="button" id="openConfig">⚙️ Configuración</button>
+</form>
+
+<div id="calcResult"></div>
+
+<!-- Modal de configuración -->
+
+<div id="configModal" class="modal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title fs-5" id="exampleModalLabel">⚙️ Configuración de la Calculadora</h3>
+        <button id="closeConfig" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <label for="uvt">Valor UVT vigente:</label>
+      <input  class="form-control" type="number" id="uvt" placeholder="ej: 47000" required>
+      <label for="redondeo">Método de redondeo:</label>
+      <select id="redondeo" class="form-select">
+        <option value="matematico">Matemático</option>
+        <option value="truncado">Truncado</option>
+      </select>
+      <div class="modal-footer">
+        <button id="saveConfig" type="button" class="btn btn-info">Guardar configuración</button>
+      </div>
+    </div>
+  </div>
+</div>

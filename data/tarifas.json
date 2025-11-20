@@ -1,0 +1,38 @@
+[
+    {
+        "tipo": "honorarios",
+        "unidadBase": "UVT",
+        "baseMinimaUVT": 27,
+        "rangoTarifasUVT": [
+            {
+                "min": 27,
+                "max": 100,
+                "tarifa": 0.1
+            },
+            {
+                "min": 101,
+                "max": null,
+                "tarifa": 0.15
+            }
+        ],
+        "excepciones": [
+            {
+                "clave": "exonerado",
+                "efecto": {
+                    "tipo": "exonerar"
+                }
+            },
+            {
+                "clave": "reducido",
+                "efecto": {
+                    "tipo": "reducirTarifa",
+                    "factor": 0.5
+                }
+            }
+        ],
+        "topes": {
+            "minRetencionCOP": 10000,
+            "maxRetencionCOP": 500000
+        }
+    }
+]

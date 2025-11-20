@@ -1,0 +1,20 @@
+[
+    {
+        "id": "ev1",
+        "titulo": "Declaración IVA",
+        "fecha": "2025-11-20",
+        "tipo": "IVA"
+    },
+    {
+        "id": "ev2",
+        "titulo": "Retención en la fuente",
+        "fecha": "2025-11-18",
+        "tipo": "Renta"
+    },
+    {
+        "id": "ev3",
+        "titulo": "ICA bimestre 5",
+        "fecha": "2025-11-22",
+        "tipo": "ICA"
+    }
+]

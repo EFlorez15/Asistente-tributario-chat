@@ -1,0 +1,229 @@
+/***********faq***********/
+.faq-item {
+  margin-bottom: 10px;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+  background: #2b6cb0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.faq-question:hover {
+  background: #1a4e8a;
+}
+
+.faq-answer {
+  display: none;
+  padding: 10px;
+  background: #edf2f7;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+/***********checklist***********/
+#checklist {
+  list-style: none;
+  padding: 0;
+}
+
+#checklist li {
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+}
+
+#checklist input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/***********chat***********/
+.chatbox {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  height: 300px;
+  overflow-y: auto;
+  background: #f9f9f9;
+  margin-bottom: 10px;
+}
+
+.msg {
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 5px;
+  max-width: 80%;
+}
+
+.msg.user {
+  background: #2b6cb0;
+  color: white;
+  margin-left: auto;
+  text-align: right;
+}
+
+.msg.bot {
+  background: #edf2f7;
+  color: #333;
+  margin-right: auto;
+  text-align: left;
+}
+
+#chatControls {
+  display: flex;
+  gap: 10px;
+}
+
+#userInput {
+  flex: 1;
+  padding: 8px;
+}
+
+/* calculadora */
+/* Contenedor principal */
+#calcForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #f9fafb;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Etiquetas */
+#calcForm label {
+  font-weight: 600;
+  color: #2d3748;
+}
+
+/* Inputs y selects */
+#calcForm input,
+#calcForm select {
+  padding: 10px;
+  border: 1px solid #cbd5e0;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+#calcForm input:focus,
+#calcForm select:focus {
+  border-color: #2b6cb0;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(43, 108, 176, 0.2);
+}
+
+/* Botón */
+#calcForm button {
+  padding: 12px;
+  background: #2b6cb0;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+#calcForm button:hover {
+  background: #1a4e8a;
+}
+
+/* Resultados */
+#calcResult {
+  margin-top: 20px;
+  padding: 15px;
+  background: #edf2f7;
+  border-radius: 6px;
+  border: 1px solid #cbd5e0;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+#calcResult p {
+  margin: 5px 0;
+}
+
+#calcResult b {
+  color: #2b6cb0;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.norma-card {
+  background: #f9fafb;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.norma-card h3 {
+  margin: 0 0 8px;
+  color: #2b6cb0;
+}
+
+.norma-card p {
+  margin: 0 0 10px;
+  color: #4a5568;
+}
+
+.norma-card a {
+  color: #2b6cb0;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.norma-card a:hover {
+  text-decoration: underline;
+}
+
+.report-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.report-table th,
+.report-table td {
+  border: 1px solid #cbd5e0;
+  padding: 8px;
+  text-align: left;
+}
+
+.report-table th {
+  background: #2b6cb0;
+  color: white;
+}
+
+.report-table tr:nth-child(even) {
+  background: #edf2f7;
+}

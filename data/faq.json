@@ -1,0 +1,18 @@
+[
+  {
+    "pregunta": "¿Cuándo debo pagar ICA?",
+    "respuesta": "El ICA se paga cada bimestre según el calendario oficial de la DIAN."
+  },
+  {
+    "pregunta": "¿Qué pasa si me atraso?",
+    "respuesta": "La DIAN puede imponer sanciones económicas y generar intereses de mora."
+  },
+  {
+    "pregunta": "¿Cómo calcular la retención en la fuente?",
+    "respuesta": "Debes aplicar la tarifa correspondiente sobre los ingresos del periodo, según la normatividad vigente."
+  },
+  {
+    "pregunta": "¿Qué es el IVA?",
+    "respuesta": "El IVA es un impuesto al valor agregado que se aplica a la venta de bienes y servicios."
+  }
+]
