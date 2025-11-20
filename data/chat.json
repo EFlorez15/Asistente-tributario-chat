@@ -15,7 +15,7 @@
     "clave": "hola",
     "respuesta": "¡Hola! Soy tu asistente tributario."
   },
-  [
+  
     {
       "pregunta": "¿Qué es la retención en la fuente?",
       "respuesta": "Es un mecanismo de recaudo anticipado del impuesto, donde el agente retenedor descuenta un porcentaje al realizar un pago."
@@ -216,5 +216,5 @@
       "pregunta": "¿Qué son los sistemas de facturación de la DIAN?",
       "respuesta": "Incluyen factura electrónica, POS, documento soporte y documentos equivalentes regulados por la DIAN."
     }
-  ]
+  
 ]
