@@ -7,7 +7,7 @@
     width: 260px;
     height: 100%;
     z-index: 1501;
-    background: #2563EB;
+    background: #2b6cb0;
     transition: left 0.3s ease;
   }
 
@@ -22,20 +22,21 @@
 }
 
 .logo-img {
-  max-height: 90px;   /* controla el tamaño */
+  max-height: 90px;
+  /* controla el tamaño */
   width: auto;
-  margin-top: 18px;    /* baja el logo */
- filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.8));
+  margin-top: 18px;
+  /* baja el logo */
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.8));
 }
 
+/* Logo */
 .logo-img:hover {
-  filter: drop-shadow(2px 6px 10px rgba(0,0,0,0.6));
-  transform: scale(1.05); /* pequeño zoom */
+  filter: drop-shadow(2px 6px 10px rgba(0, 0, 0, 0.6));
+  transform: scale(1.05);
+  /* pequeño zoom */
   transition: all 0.3s ease;
 }
-
-
-
 
 /***********faq***********/
 .faq-item {
@@ -265,4 +266,25 @@
 
 .report-table tr:nth-child(even) {
   background: #edf2f7;
+}
+
+/* Main content */
+main#view {
+  background: #f7fafc;
+  min-height: calc(100vh - 60px);
+}
+
+/* Botones uniformes */
+button {
+  background: #2b6cb0;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #1a4e8a;
 }

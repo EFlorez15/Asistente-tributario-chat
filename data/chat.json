@@ -1,5 +1,9 @@
 [
   {
+    "clave": "hola",
+    "respuesta": "¡Hola! Soy tu asistente tributario."
+  },
+  {
     "clave": "retención",
     "respuesta": "La retención en la fuente vence el 10 de noviembre."
   },
@@ -12,209 +16,203 @@
     "respuesta": "El IVA es un impuesto al valor agregado aplicado a bienes y servicios."
   },
   {
-    "clave": "hola",
-    "respuesta": "¡Hola! Soy tu asistente tributario."
+    "clave": "¿Qué es la retención en la fuente?",
+    "respuesta": "Es un mecanismo de recaudo anticipado del impuesto, donde el agente retenedor descuenta un porcentaje al realizar un pago."
   },
-  [
-    {
-      "pregunta": "¿Qué es la retención en la fuente?",
-      "respuesta": "Es un mecanismo de recaudo anticipado del impuesto, donde el agente retenedor descuenta un porcentaje al realizar un pago."
-    },
-    {
-      "pregunta": "¿Quiénes deben practicar retención en la fuente?",
-      "respuesta": "Deben practicar retención las personas naturales o jurídicas catalogadas como agentes retenedores por la DIAN o por norma especial."
-    },
-    {
-      "pregunta": "¿Qué es la UVT?",
-      "respuesta": "La Unidad de Valor Tributario es una medida utilizada para estandarizar cifras tributarias y facilitar cálculos de topes, sanciones y retenciones."
-    },
-    {
-      "pregunta": "¿Para qué sirve la UVT?",
-      "respuesta": "La UVT sirve como base para determinar sanciones, retenciones, deducciones, topes de obligaciones e información exógena."
-    },
-    {
-      "pregunta": "¿Cuál es el valor de la UVT?",
-      "respuesta": "El valor de la UVT depende del año vigente y es actualizado por la DIAN anualmente."
-    },
-    {
-      "pregunta": "¿Qué es el régimen SIMPLE?",
-      "respuesta": "Es un régimen voluntario que simplifica el pago de impuestos como renta e ICA, y reduce cargas formales para pequeños y medianos negocios."
-    },
-    {
-      "pregunta": "¿Quiénes pueden pertenecer al régimen SIMPLE?",
-      "respuesta": "Pueden pertenecer personas naturales y jurídicas con ingresos hasta 100.000 UVT y que cumplan los requisitos establecidos por la DIAN."
-    },
-    {
-      "pregunta": "¿Qué es el impuesto de renta?",
-      "respuesta": "Es un impuesto anual que grava los ingresos netos obtenidos por personas naturales y jurídicas."
-    },
-    {
-      "pregunta": "¿Qué es el ICA?",
-      "respuesta": "El Impuesto de Industria y Comercio grava actividades comerciales, industriales y de servicios realizadas en un municipio."
-    },
-    {
-      "pregunta": "¿Qué es el IVA?",
-      "respuesta": "El Impuesto al Valor Agregado es un tributo aplicado a bienes y servicios gravados en Colombia."
-    },
-    {
-      "pregunta": "¿Cuáles son las tarifas del IVA?",
-      "respuesta": "Las tarifas de IVA en Colombia son 0%, 5% y 19%, según el bien o servicio."
-    },
-    {
-      "pregunta": "¿Qué es un bien excluido de IVA?",
-      "respuesta": "Es un bien o servicio no gravado con IVA según el Estatuto Tributario."
-    },
-    {
-      "pregunta": "¿Qué es un bien exento de IVA?",
-      "respuesta": "Es un bien que está gravado a tarifa 0% pero permite solicitar devolución de saldos a favor."
-    },
-    {
-      "pregunta": "¿Qué es el ICA bimestral?",
-      "respuesta": "Es la obligación de declarar ICA cada dos meses según la actividad económica del contribuyente."
-    },
-    {
-      "pregunta": "¿Qué es un agente retenedor?",
-      "respuesta": "Es la persona o entidad obligada a descontar impuestos como retención en la fuente en los pagos efectuados."
-    },
-    {
-      "pregunta": "¿Qué es la declaración de renta?",
-      "respuesta": "Es una declaración anual donde se reportan ingresos, deducciones, patrimonio y retenciones para determinar el impuesto a pagar."
-    },
-    {
-      "pregunta": "¿Qué pasa si no presento una declaración?",
-      "respuesta": "Se generan sanciones de extemporaneidad, intereses de mora y procesos sancionatorios."
-    },
-    {
-      "pregunta": "¿Qué es la facturación electrónica?",
-      "respuesta": "Es un documento digital obligatorio que soporta transacciones comerciales, regulado por la DIAN."
-    },
-    {
-      "pregunta": "¿Qué es el documento soporte?",
-      "respuesta": "Es un documento obligatorio para compras realizadas a personas no obligadas a facturar."
-    },
-    {
-      "pregunta": "¿Qué es el documento soporte electrónico?",
-      "respuesta": "Es la versión digital del documento soporte, regulada por la Resolución 167 de 2021 de la DIAN."
-    },
-    {
-      "pregunta": "¿Qué es una Nota de Ajuste?",
-      "respuesta": "Es un documento electrónico que permite corregir o ajustar una factura electrónica."
-    },
-    {
-      "pregunta": "¿Qué es la información exógena?",
-      "respuesta": "Es un reporte anual donde se informan a la DIAN operaciones económicas relevantes realizadas durante el año."
-    },
-    {
-      "pregunta": "¿Quiénes están obligados a presentar información exógena?",
-      "respuesta": "Los contribuyentes que superen topes de ingresos, patrimonio o volumen de operaciones establecidos por la DIAN."
-    },
-    {
-      "pregunta": "¿Qué es el RUT?",
-      "respuesta": "Es el Registro Único Tributario que contiene la información fiscal del contribuyente."
-    },
-    {
-      "pregunta": "¿Cómo actualizo el RUT?",
-      "respuesta": "La actualización del RUT se realiza a través del portal web de la DIAN ingresando con firma electrónica."
-    },
-    {
-      "pregunta": "¿Qué es la sanción por extemporaneidad?",
-      "respuesta": "Es la multa aplicable cuando una declaración se presenta después de la fecha límite fijada por la DIAN."
-    },
-    {
-      "pregunta": "¿Qué son los intereses de mora?",
-      "respuesta": "Son intereses generados por pagos tardíos de impuestos, calculados según la tasa de usura vigente."
-    },
-    {
-      "pregunta": "¿Qué es una base gravable?",
-      "respuesta": "Es el valor sobre el cual se calcula un impuesto o retención."
-    },
-    {
-      "pregunta": "¿Qué es una deducción?",
-      "respuesta": "Es un gasto necesario relacionado con la actividad económica que puede restarse de los ingresos para calcular el impuesto."
-    },
-    {
-      "pregunta": "¿Qué es una renta exenta?",
-      "respuesta": "Son valores que la ley permite excluir del impuesto de renta."
-    },
-    {
-      "pregunta": "¿Qué es un costo?",
-      "respuesta": "Es un valor asociado a la producción o adquisición de bienes y servicios."
-    },
-    {
-      "pregunta": "¿Qué es un gasto?",
-      "respuesta": "Es un valor relacionado con la operación del negocio y su administración."
-    },
-    {
-      "pregunta": "¿Qué es la retención por servicios?",
-      "respuesta": "Es la retención en la fuente aplicada a pagos por servicios prestados por personas naturales o jurídicas."
-    },
-    {
-      "pregunta": "¿Qué es la retención por compras?",
-      "respuesta": "Es la retención en la fuente practicada por la adquisición de bienes cuando se supera un tope mínimo."
-    },
-    {
-      "pregunta": "¿Qué es la retención de IVA?",
-      "respuesta": "Es la retención del IVA aplicada por los agentes designados cuando adquieren bienes o servicios."
-    },
-    {
-      "pregunta": "¿Qué son los autorretenedores?",
-      "respuesta": "Son contribuyentes autorizados por la DIAN para autorretener el impuesto en lugar de que otro agente lo haga."
-    },
-    {
-      "pregunta": "¿Qué es un anticipo de renta?",
-      "respuesta": "Es un pago anticipado del impuesto de renta del siguiente año gravable."
-    },
-    {
-      "pregunta": "¿Qué es un saldo a favor?",
-      "respuesta": "Es un valor que puede imputarse a períodos futuros o solicitarse en devolución ante la DIAN."
-    },
-    {
-      "pregunta": "¿Qué es la firma electrónica?",
-      "respuesta": "Es un método de autenticación utilizado para presentar declaraciones y documentos ante la DIAN."
-    },
-    {
-      "pregunta": "¿Qué es el régimen común del IVA?",
-      "respuesta": "Es el régimen donde el contribuyente recauda y declara el IVA cobrado."
-    },
-    {
-      "pregunta": "¿Qué es el régimen no responsable de IVA?",
-      "respuesta": "Es un régimen para pequeños contribuyentes cuyos ingresos no obligan a recaudar ni declarar IVA."
-    },
-    {
-      "pregunta": "¿Qué es un cese de actividades en el RUT?",
-      "respuesta": "Es la actualización del RUT que indica que el contribuyente deja de ejercer su actividad económica."
-    },
-    {
-      "pregunta": "¿Qué es el código CIIU?",
-      "respuesta": "Es el código que clasifica la actividad económica del contribuyente."
-    },
-    {
-      "pregunta": "¿Qué es la DIAN?",
-      "respuesta": "Es la entidad encargada de administrar impuestos, aduanas y fiscalización en Colombia."
-    },
-    {
-      "pregunta": "¿Qué es el monotributo?",
-      "respuesta": "Era un régimen simplificado que fue reemplazado por el régimen SIMPLE."
-    },
-    {
-      "pregunta": "¿Qué es un descuento tributario?",
-      "respuesta": "Es un valor que reduce directamente el impuesto de renta a pagar."
-    },
-    {
-      "pregunta": "¿Qué es la retención mínima?",
-      "respuesta": "Es el mínimo valor de retención que debe aplicarse según la normativa vigente."
-    },
-    {
-      "pregunta": "¿Qué es el certificado de ingresos y retenciones?",
-      "respuesta": "Es un documento que certifica las retenciones practicadas a un trabajador o proveedor."
-    },
-    {
-      "pregunta": "¿Qué es la responsabilidad 52 en el RUT?",
-      "respuesta": "Es la responsabilidad asignada a los facturadores electrónicos."
-    },
-    {
-      "pregunta": "¿Qué son los sistemas de facturación de la DIAN?",
-      "respuesta": "Incluyen factura electrónica, POS, documento soporte y documentos equivalentes regulados por la DIAN."
-    }
-  ]
+  {
+    "pregunta": "¿Quiénes deben practicar retención en la fuente?",
+    "respuesta": "Deben practicar retención las personas naturales o jurídicas catalogadas como agentes retenedores por la DIAN o por norma especial."
+  },
+  {
+    "pregunta": "¿Qué es la UVT?",
+    "respuesta": "La Unidad de Valor Tributario es una medida utilizada para estandarizar cifras tributarias y facilitar cálculos de topes, sanciones y retenciones."
+  },
+  {
+    "pregunta": "¿Para qué sirve la UVT?",
+    "respuesta": "La UVT sirve como base para determinar sanciones, retenciones, deducciones, topes de obligaciones e información exógena."
+  },
+  {
+    "pregunta": "¿Cuál es el valor de la UVT?",
+    "respuesta": "El valor de la UVT depende del año vigente y es actualizado por la DIAN anualmente."
+  },
+  {
+    "pregunta": "¿Qué es el régimen SIMPLE?",
+    "respuesta": "Es un régimen voluntario que simplifica el pago de impuestos como renta e ICA, y reduce cargas formales para pequeños y medianos negocios."
+  },
+  {
+    "pregunta": "¿Quiénes pueden pertenecer al régimen SIMPLE?",
+    "respuesta": "Pueden pertenecer personas naturales y jurídicas con ingresos hasta 100.000 UVT y que cumplan los requisitos establecidos por la DIAN."
+  },
+  {
+    "pregunta": "¿Qué es el impuesto de renta?",
+    "respuesta": "Es un impuesto anual que grava los ingresos netos obtenidos por personas naturales y jurídicas."
+  },
+  {
+    "pregunta": "¿Qué es el ICA?",
+    "respuesta": "El Impuesto de Industria y Comercio grava actividades comerciales, industriales y de servicios realizadas en un municipio."
+  },
+  {
+    "pregunta": "¿Qué es el IVA?",
+    "respuesta": "El Impuesto al Valor Agregado es un tributo aplicado a bienes y servicios gravados en Colombia."
+  },
+  {
+    "pregunta": "¿Cuáles son las tarifas del IVA?",
+    "respuesta": "Las tarifas de IVA en Colombia son 0%, 5% y 19%, según el bien o servicio."
+  },
+  {
+    "pregunta": "¿Qué es un bien excluido de IVA?",
+    "respuesta": "Es un bien o servicio no gravado con IVA según el Estatuto Tributario."
+  },
+  {
+    "pregunta": "¿Qué es un bien exento de IVA?",
+    "respuesta": "Es un bien que está gravado a tarifa 0% pero permite solicitar devolución de saldos a favor."
+  },
+  {
+    "pregunta": "¿Qué es el ICA bimestral?",
+    "respuesta": "Es la obligación de declarar ICA cada dos meses según la actividad económica del contribuyente."
+  },
+  {
+    "pregunta": "¿Qué es un agente retenedor?",
+    "respuesta": "Es la persona o entidad obligada a descontar impuestos como retención en la fuente en los pagos efectuados."
+  },
+  {
+    "pregunta": "¿Qué es la declaración de renta?",
+    "respuesta": "Es una declaración anual donde se reportan ingresos, deducciones, patrimonio y retenciones para determinar el impuesto a pagar."
+  },
+  {
+    "pregunta": "¿Qué pasa si no presento una declaración?",
+    "respuesta": "Se generan sanciones de extemporaneidad, intereses de mora y procesos sancionatorios."
+  },
+  {
+    "pregunta": "¿Qué es la facturación electrónica?",
+    "respuesta": "Es un documento digital obligatorio que soporta transacciones comerciales, regulado por la DIAN."
+  },
+  {
+    "pregunta": "¿Qué es el documento soporte?",
+    "respuesta": "Es un documento obligatorio para compras realizadas a personas no obligadas a facturar."
+  },
+  {
+    "pregunta": "¿Qué es el documento soporte electrónico?",
+    "respuesta": "Es la versión digital del documento soporte, regulada por la Resolución 167 de 2021 de la DIAN."
+  },
+  {
+    "pregunta": "¿Qué es una Nota de Ajuste?",
+    "respuesta": "Es un documento electrónico que permite corregir o ajustar una factura electrónica."
+  },
+  {
+    "pregunta": "¿Qué es la información exógena?",
+    "respuesta": "Es un reporte anual donde se informan a la DIAN operaciones económicas relevantes realizadas durante el año."
+  },
+  {
+    "pregunta": "¿Quiénes están obligados a presentar información exógena?",
+    "respuesta": "Los contribuyentes que superen topes de ingresos, patrimonio o volumen de operaciones establecidos por la DIAN."
+  },
+  {
+    "pregunta": "¿Qué es el RUT?",
+    "respuesta": "Es el Registro Único Tributario que contiene la información fiscal del contribuyente."
+  },
+  {
+    "pregunta": "¿Cómo actualizo el RUT?",
+    "respuesta": "La actualización del RUT se realiza a través del portal web de la DIAN ingresando con firma electrónica."
+  },
+  {
+    "pregunta": "¿Qué es la sanción por extemporaneidad?",
+    "respuesta": "Es la multa aplicable cuando una declaración se presenta después de la fecha límite fijada por la DIAN."
+  },
+  {
+    "pregunta": "¿Qué son los intereses de mora?",
+    "respuesta": "Son intereses generados por pagos tardíos de impuestos, calculados según la tasa de usura vigente."
+  },
+  {
+    "pregunta": "¿Qué es una base gravable?",
+    "respuesta": "Es el valor sobre el cual se calcula un impuesto o retención."
+  },
+  {
+    "pregunta": "¿Qué es una deducción?",
+    "respuesta": "Es un gasto necesario relacionado con la actividad económica que puede restarse de los ingresos para calcular el impuesto."
+  },
+  {
+    "pregunta": "¿Qué es una renta exenta?",
+    "respuesta": "Son valores que la ley permite excluir del impuesto de renta."
+  },
+  {
+    "pregunta": "¿Qué es un costo?",
+    "respuesta": "Es un valor asociado a la producción o adquisición de bienes y servicios."
+  },
+  {
+    "pregunta": "¿Qué es un gasto?",
+    "respuesta": "Es un valor relacionado con la operación del negocio y su administración."
+  },
+  {
+    "pregunta": "¿Qué es la retención por servicios?",
+    "respuesta": "Es la retención en la fuente aplicada a pagos por servicios prestados por personas naturales o jurídicas."
+  },
+  {
+    "pregunta": "¿Qué es la retención por compras?",
+    "respuesta": "Es la retención en la fuente practicada por la adquisición de bienes cuando se supera un tope mínimo."
+  },
+  {
+    "pregunta": "¿Qué es la retención de IVA?",
+    "respuesta": "Es la retención del IVA aplicada por los agentes designados cuando adquieren bienes o servicios."
+  },
+  {
+    "pregunta": "¿Qué son los autorretenedores?",
+    "respuesta": "Son contribuyentes autorizados por la DIAN para autorretener el impuesto en lugar de que otro agente lo haga."
+  },
+  {
+    "pregunta": "¿Qué es un anticipo de renta?",
+    "respuesta": "Es un pago anticipado del impuesto de renta del siguiente año gravable."
+  },
+  {
+    "pregunta": "¿Qué es un saldo a favor?",
+    "respuesta": "Es un valor que puede imputarse a períodos futuros o solicitarse en devolución ante la DIAN."
+  },
+  {
+    "pregunta": "¿Qué es la firma electrónica?",
+    "respuesta": "Es un método de autenticación utilizado para presentar declaraciones y documentos ante la DIAN."
+  },
+  {
+    "pregunta": "¿Qué es el régimen común del IVA?",
+    "respuesta": "Es el régimen donde el contribuyente recauda y declara el IVA cobrado."
+  },
+  {
+    "pregunta": "¿Qué es el régimen no responsable de IVA?",
+    "respuesta": "Es un régimen para pequeños contribuyentes cuyos ingresos no obligan a recaudar ni declarar IVA."
+  },
+  {
+    "pregunta": "¿Qué es un cese de actividades en el RUT?",
+    "respuesta": "Es la actualización del RUT que indica que el contribuyente deja de ejercer su actividad económica."
+  },
+  {
+    "pregunta": "¿Qué es el código CIIU?",
+    "respuesta": "Es el código que clasifica la actividad económica del contribuyente."
+  },
+  {
+    "pregunta": "¿Qué es la DIAN?",
+    "respuesta": "Es la entidad encargada de administrar impuestos, aduanas y fiscalización en Colombia."
+  },
+  {
+    "pregunta": "¿Qué es el monotributo?",
+    "respuesta": "Era un régimen simplificado que fue reemplazado por el régimen SIMPLE."
+  },
+  {
+    "pregunta": "¿Qué es un descuento tributario?",
+    "respuesta": "Es un valor que reduce directamente el impuesto de renta a pagar."
+  },
+  {
+    "pregunta": "¿Qué es la retención mínima?",
+    "respuesta": "Es el mínimo valor de retención que debe aplicarse según la normativa vigente."
+  },
+  {
+    "pregunta": "¿Qué es el certificado de ingresos y retenciones?",
+    "respuesta": "Es un documento que certifica las retenciones practicadas a un trabajador o proveedor."
+  },
+  {
+    "pregunta": "¿Qué es la responsabilidad 52 en el RUT?",
+    "respuesta": "Es la responsabilidad asignada a los facturadores electrónicos."
+  },
+  {
+    "pregunta": "¿Qué son los sistemas de facturación de la DIAN?",
+    "respuesta": "Incluyen factura electrónica, POS, documento soporte y documentos equivalentes regulados por la DIAN."
+  }
 ]
