@@ -34,10 +34,11 @@
   <!-- Navegación lateral -->
   <nav class="pc-sidebar">
     <div class="navbar-wrapper">
-      <div class="m-header">
-        <div class="logo">
-          <h2>Tributaria</h2>
-        </div>
+      <div class="m-header d-flex justify-content-center">
+        <a href="#" class="b-brand text-primary">
+          <!-- ========   Change your logo from here   ============ -->
+          <img src="./images/logo1.png" class="img-fluid logo-img" alt="logo">
+        </a>
       </div>
       <div class="navbar-content simplebar-scrollable-y" data-simplebar="init">
         <div class="simplebar-wrapper" style="margin: -10px 0px;">
@@ -135,13 +136,11 @@
               <i class="bi bi-list-task"></i>
             </a>
           </li>
-
         </ul>
       </div>
       <!-- [Mobile Media Block end] -->
       <div class="ms-auto">
         <ul class="list-unstyled">
-
           <li class="dropdown pc-h-item">
             <a class="pc-head-link dropdown-toggle arrow-none me-0" data-bs-toggle="dropdown" href="#" role="button"
               aria-haspopup="false" aria-expanded="false">
@@ -154,8 +153,10 @@
                 <a href="#" class="btn btn-link btn-sm">Marcar todo como leído</a>
               </div>
 
-
               <div class="alert alert-success" role="alert">
+                ✅ El evento Declaración IVA está programado para <a href="#" class="alert-link">Hoy.</a>
+              </div>
+              <div class="alert alert-info" role="alert">
                 ✅ El evento ICA Bimestre 5 está programado para el <a href="#" class="alert-link">14/12/2025.</a>
               </div>
               <div class="alert alert-danger" role="alert">
@@ -169,28 +170,29 @@
               </div>
             </div>
           </li>
-          <li class="dropdown pc-h-item header-user-profile">
-            <a class="pc-head-link dropdown-toggle arrow-none me-0" data-bs-toggle="dropdown" href="#" role="button"
-              aria-haspopup="false" data-bs-auto-close="outside" aria-expanded="false">
-              <i class="bi bi-person-circle"></i>
+          <!-- [ Perfil usuario ] -->
+          <li class="nav-item dropdown ms-auto d-flex align-items-center">
+            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="userDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-person-circle fs-4 me-2"></i>
+              <span class="d-none d-md-inline">Academico</span>
             </a>
-            <div class="dropdown-menu dropdown-menu-end pc-h-dropdown">
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
               <div class="dropdown-header">
-                <h6 class="mb-0">Usuario</h6>
-                <small class="text-muted">@correo</small>
-
+                <h6 class="mb-0">Tributaria</h6>
+                <small class="text-muted">Tributaria@ejemplo.com</small>
               </div>
-              <a href="#" class="dropdown-item">
-                <i class="ph ph-user-circle"></i>
-                <span>Perfil &amp; Configuracion</span>
+              <a class="dropdown-item" href="#"><i class="ph ph-user-circle"></i>
+                <span>Perfil</span>
+              </a>
+              <a class="dropdown-item" href="#"><i class="ph ph-user-circle"></i>
+                <span>Configuracion</span>
               </a>
               <div class="dropdown-divider"></div>
-              <a href="#" class="dropdown-item text-danger">
-                <i class="ph ph-sign-out"></i>
-                <span>cerrar sesion</span>
-              </a>
+              <a class="dropdown-item text-danger" href="#">Cerrar sesión</a>
             </div>
           </li>
+          <!-- [ Perfil usuario ] end -->
         </ul>
       </div>
     </div>
@@ -219,19 +221,25 @@
     <div class="footer-wrapper container-fluid">
       <div class="row">
         <div class="col my-1">
-          <p class="m-0">Eflorez <a href="" target="_blank">design</a></p>
+          <p class="m-0"> <a href="" target="_blank"></a></p>
         </div>
         <div class="col-md-auto my-1">
           <ul class="list-inline footer-link mb-0">
-            <li class="list-inline-item"><a href="">Inicio</a></li>
-            <li class="list-inline-item"><a href="" target="_blank">Documentacion</a>
+            <li class="list-inline-item">
+              <a href="javascript:void(0)" onclick="navigate('normas')">
+
+                <span class="pc-mtext" data-i18n="Layouts">Normatividad</span>
+              </a>
             </li>
-            <li class="list-inline-item"><a href="" target="_blank">Soporte</a></li>
+            <li class="list-inline-item">
+              <atarget="_blank">Eflorez</a>
+            </li>
           </ul>
         </div>
       </div>
     </div>
   </footer>
+
   <div class="pct-c-btn-modern">
     <button type="button" class="customizer-trigger" data-bs-toggle="offcanvas" data-bs-target="#offcanvas_pc_layout"
       data-bs-placement="left" title="Theme Customizer">

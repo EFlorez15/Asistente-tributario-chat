@@ -1,40 +1,70 @@
-// ---------------------------------------------------
-//  UI.JS — Control de la barra lateral (sidebar)
-// ---------------------------------------------------
-// ui.js — versión FINAL para escritorio + móvil
+// Detecta si es móvil
+function isMobile() {
+  return window.innerWidth <= 992;
+}
 
-function attachSidebarEvents() {
+function openSidebarMobile() {
   const sidebar = document.querySelector(".pc-sidebar");
-  if (!sidebar) return;
+  sidebar.classList.add("pc-sidebar-show");
+  showOverlay();
+}
 
-  const btnDesktop = document.getElementById("sidebar-hide");
-  const btnMobile = document.getElementById("mobile-collapse");
+function closeSidebarMobile() {
+  const sidebar = document.querySelector(".pc-sidebar");
+  sidebar.classList.remove("pc-sidebar-show");
+  hideOverlay();
+}
 
-  const toggle = (e) => {
-    e.preventDefault();
-    sidebar.classList.toggle("pc-sidebar-hide");
-  };
+function toggleSidebarDesktop() {
+  const sidebar = document.querySelector(".pc-sidebar");
+  sidebar.classList.toggle("pc-sidebar-hide");
+}
 
-  // Aseguramos listeners correctos en ambos botones
-  if (btnDesktop && !btnDesktop.dataset.bound) {
-    btnDesktop.addEventListener("click", toggle);
-    btnDesktop.dataset.bound = "1";
-  }
-
-  if (btnMobile && !btnMobile.dataset.bound) {
-    btnMobile.addEventListener("click", toggle);
-    btnMobile.dataset.bound = "1";
+// --- Overlay ---
+function showOverlay() {
+  let overlay = document.getElementById("sidebar-overlay");
+  if (!overlay) {
+    overlay = document.createElement("div");
+    overlay.id = "sidebar-overlay";
+    overlay.style.cssText = `
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+      z-index: 1400;
+    `;
+    document.body.appendChild(overlay);
+    overlay.addEventListener("click", closeSidebarMobile);
   }
 }
 
-// 1) Ejecutar cuando cargue el DOM
-document.addEventListener("DOMContentLoaded", () => {
-  attachSidebarEvents();
+function hideOverlay() {
+  const overlay = document.getElementById("sidebar-overlay");
+  if (overlay) overlay.remove();
+}
 
-  // 2) Reintentar después de 300ms (por si aparecer en móvil tarda)
-  setTimeout(attachSidebarEvents, 300);
+// --- EVENTOS ---
+document.addEventListener("DOMContentLoaded", () => {
+  const sidebarBtnDesktop = document.getElementById("sidebar-hide");
+  const sidebarBtnMobile = document.getElementById("mobile-collapse");
+
+  // Escritorio
+  sidebarBtnDesktop?.addEventListener("click", (e) => {
+    e.preventDefault();
+    toggleSidebarDesktop();
+  });
+
+  // Móvil
+  sidebarBtnMobile?.addEventListener("click", (e) => {
+    e.preventDefault();
+    openSidebarMobile();
+  });
 });
 
-// 3) Exponer global si lo necesitas
-window.ui = { attachSidebarEvents };
+// Export global
+window.ui = {
+  openSidebarMobile,
+  closeSidebarMobile,
+  toggleSidebarDesktop
+};
+
 
