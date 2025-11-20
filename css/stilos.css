@@ -38,34 +38,6 @@
   transition: all 0.3s ease;
 }
 
-/***********faq***********/
-.faq-item {
-  margin-bottom: 10px;
-}
-
-.faq-question {
-  width: 100%;
-  text-align: left;
-  padding: 10px;
-  background: #2b6cb0;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.faq-question:hover {
-  background: #1a4e8a;
-}
-
-.faq-answer {
-  display: none;
-  padding: 10px;
-  background: #edf2f7;
-  border-radius: 5px;
-  margin-top: 5px;
-}
-
 /***********checklist***********/
 #checklist {
   list-style: none;
@@ -83,46 +55,98 @@
 }
 
 /***********chat***********/
+.chat-wrapper {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background: var(--color-light);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.chat-header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.chat-header h2 {
+  margin: 0;
+  color: var(--color-primary);
+}
+
+.chat-header .subtitle {
+  font-size: 14px;
+  color: var(--color-neutral);
+}
+
 .chatbox {
-  border: 1px solid #ccc;
+  background: white;
+  border: 1px solid var(--color-neutral);
   border-radius: 8px;
   padding: 10px;
   height: 300px;
   overflow-y: auto;
-  background: #f9f9f9;
   margin-bottom: 10px;
 }
 
 .msg {
-  margin: 5px 0;
-  padding: 8px;
-  border-radius: 5px;
+  padding: 8px 12px;
+  margin: 6px 0;
+  border-radius: 12px;
   max-width: 80%;
+  word-wrap: break-word;
 }
 
 .msg.user {
   background: #2b6cb0;
   color: white;
+  align-self: flex-end;
   margin-left: auto;
-  text-align: right;
 }
 
 .msg.bot {
   background: #edf2f7;
-  color: #333;
+  color: #2d3748;
+  align-self: flex-start;
   margin-right: auto;
-  text-align: left;
 }
 
-#chatControls {
+.chat-input {
   display: flex;
   gap: 10px;
 }
 
-#userInput {
+.chat-input input {
   flex: 1;
-  padding: 8px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid var(--color-neutral);
 }
+
+.chat-suggestions {
+  margin-top: 20px;
+}
+
+.chat-suggestions ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chat-suggestions li {
+  background: #e2e8f0;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.chat-suggestions li:hover {
+  background: #cbd5e0;
+}
+
 
 /* calculadora */
 /* Contenedor principal */

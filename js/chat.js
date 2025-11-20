@@ -17,9 +17,7 @@ export function init() {
   // Cargar respuestas desde JSON
   fetch("data/chat.json")
     .then(res => res.json())
-    .then(data => {
-      respuestas = data;
-    })
+    .then(data => { respuestas = data; })
     .catch(err => {
       chatbox.innerHTML += `
         <div class="msg bot">❌ Error cargando respuestas: ${err.message}</div>
@@ -27,8 +25,8 @@ export function init() {
     });
 
   // Función para enviar mensaje
-  function enviarMensaje() {
-    const preguntaOriginal = input.value;
+  function enviarMensaje(textoManual = null) {
+    const preguntaOriginal = textoManual || input.value;
     const pregunta = normalizar(preguntaOriginal);
 
     if (!pregunta) return;
@@ -38,18 +36,25 @@ export function init() {
     input.value = "";
     chatbox.scrollTop = chatbox.scrollHeight;
 
-    // Buscar respuesta
-    let respuesta = "Lo siento, aún no tengo información exacta sobre ese tema.";
-
+    // Buscar respuesta (exacta primero, luego parcial)
+    let respuesta = null;
     for (let item of respuestas) {
       const clave = normalizar(item.clave || item.pregunta || "");
-      if (pregunta.includes(clave) || clave.includes(pregunta)) {
-        respuesta = item.respuesta;
-        break;
+      if (pregunta === clave) { respuesta = item.respuesta; break; }
+    }
+    if (!respuesta) {
+      for (let item of respuestas) {
+        const clave = normalizar(item.clave || item.pregunta || "");
+        if (pregunta.includes(clave) || clave.includes(pregunta)) {
+          respuesta = item.respuesta; break;
+        }
       }
     }
+    if (!respuesta) {
+      respuesta = "Lo siento, aún no tengo información exacta sobre ese tema.";
+    }
 
-    // Mostrar con pequeño delay para hacerlo más humano
+    // Mostrar con pequeño delay
     setTimeout(() => {
       chatbox.innerHTML += `<div class="msg bot">${respuesta}</div>`;
       chatbox.scrollTop = chatbox.scrollHeight;
@@ -57,11 +62,20 @@ export function init() {
   }
 
   // Botón enviar
-  sendBtn.addEventListener("click", enviarMensaje);
+  sendBtn.addEventListener("click", () => enviarMensaje());
 
   // Enter para enviar
   input.addEventListener("keypress", (e) => {
     if (e.key === "Enter") enviarMensaje();
   });
-}
 
+  // 👉 NUEVO: Listener para preguntas sugeridas
+  document.querySelectorAll(".chat-suggestions li").forEach(li => {
+    li.addEventListener("click", () => {
+      enviarMensaje(li.dataset.pregunta);
+    });
+  });
+
+  // Exponer globalmente si quieres usarlo en otros módulos
+  window.chatEnviar = enviarMensaje;
+}

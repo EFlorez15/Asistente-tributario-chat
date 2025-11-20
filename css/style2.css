@@ -1,205 +1,209 @@
-/* =========================================================
-   PALETA MODERNA (Opción 3)
-   ========================================================= */
-:root {
-    --color-primary: #3B82F6;
-    --color-primary-dark: #2563EB;
-    --color-bg-soft: #F4F5F7;
-    --color-bg-light: #FFFFFF;
-    --color-border: #D1D5DB;
-    --color-text: #1F2937;
-    --color-text-light: #6B7280;
-    --shadow-soft: 0 2px 6px rgba(0, 0, 0, 0.08);
-}
-
-/* =========================================================
-   RESET / BASE
-   ========================================================= */
-body {
+/* ------------------------------
+   RESET BÁSICO
+------------------------------ */
+* {
     margin: 0;
-    background: var(--color-bg-soft);
-    font-family: "Inter", Arial, sans-serif;
-    color: var(--color-text);
-    overflow-x: hidden;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-    font-weight: 600;
-    color: var(--color-text);
+body {
+    background: #f5f6fa;
+    font-family: "Inter", sans-serif;
+    color: #333;
 }
 
-a {
-    color: var(--color-primary);
-    text-decoration: none;
-}
-
-a:hover {
-    color: var(--color-primary-dark);
-}
-
-/* =========================================================
-   HEADER
-   ========================================================= */
-.pc-header {
+/* ------------------------------
+   SIDEBAR
+------------------------------ */
+.pc-sidebar {
+    width: 260px;
+    background: #fff;
     position: fixed;
     top: 0;
-    width: 100%;
-    height: 58px;
-    background: var(--color-bg-light);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 18px;
-    box-shadow: var(--shadow-soft);
-    z-index: 2000;
-}
-
-.pc-header .btn {
-    color: var(--color-text);
-}
-
-/* =========================================================
-   SIDEBAR
-   ========================================================= */
-.pc-sidebar {
-    position: fixed;
-    top: 58px;
     left: 0;
-    width: 260px;
-    height: calc(100vh - 58px);
-    background: var(--color-bg-light);
-    padding: 15px;
-    border-right: 1px solid var(--color-border);
-    box-shadow: var(--shadow-soft);
-    overflow-y: auto;
-    transition: transform .28s ease;
-    z-index: 1500;
+    height: 100vh;
+    border-right: 1px solid #ddd;
+    transition: transform .3s ease;
+    z-index: 1030;
 }
 
 .pc-sidebar-hide {
     transform: translateX(-100%);
 }
 
+.pc-sidebar .m-header {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+
+.pc-sidebar .logo-img {
+    max-height: 55px;
+}
+
+.pc-navbar {
+    list-style: none;
+    padding: 10px 0;
+}
+
+.pc-item {
+    padding: 0;
+}
+
+.pc-item.pc-caption label {
+    font-size: .75rem;
+    padding: 12px 20px;
+    opacity: .6;
+    display: block;
+}
+
 .pc-link {
     display: flex;
     align-items: center;
-    padding: 12px 12px;
-    border-radius: 8px;
-    color: var(--color-text);
-    font-weight: 500;
-    transition: background .2s, color .2s;
-}
-
-.pc-link i {
-    font-size: 22px;
+    padding: 12px 20px;
+    gap: 10px;
+    color: #333;
+    text-decoration: none;
+    transition: .2s;
 }
 
 .pc-link:hover {
-    background: var(--color-primary);
-    color: white;
+    background: #e9ecef;
 }
 
-.pc-link.active {
-    background: var(--color-primary-dark);
-    color: white;
+.pc-micon i {
+    font-size: 1.2rem;
 }
 
-/* =========================================================
-   CONTENEDOR PRINCIPAL (SPA VIEW)
-   ========================================================= */
+/* ------------------------------
+   HEADER SUPERIOR
+------------------------------ */
+.pc-header {
+    position: fixed;
+    left: 260px;
+    right: 0;
+    top: 0;
+    height: 70px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    z-index: 1020;
+    transition: left .3s;
+}
+
+.pc-sidebar-hide~.pc-header {
+    left: 0;
+}
+
+.header-wrapper {
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+.pc-h-item {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.pc-head-link {
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+/* ------------------------------
+   CONTENIDO
+------------------------------ */
 .pc-container {
+    padding-top: 70px;
     margin-left: 260px;
-    padding-top: 75px;
-    transition: margin-left .28s ease;
+    transition: margin-left .3s;
 }
 
 .pc-sidebar-hide~.pc-container {
     margin-left: 0;
 }
 
-#view {
+.pc-content {
     padding: 20px;
 }
 
-/* =========================================================
-   CARDS / BLOQUES
-   ========================================================= */
-.card {
-    background: var(--color-bg-light);
-    border-radius: 12px;
-    padding: 20px;
-    border: 1px solid var(--color-border);
-    box-shadow: var(--shadow-soft);
+/* ------------------------------
+   FOOTER
+------------------------------ */
+.pc-footer {
+    margin-left: 260px;
+    background: #fff;
+    padding: 15px;
+    border-top: 1px solid #ddd;
+    transition: margin-left .3s;
 }
 
-.card-title {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: var(--color-text);
+.pc-sidebar-hide~.pc-footer {
+    margin-left: 0;
 }
 
-/* =========================================================
-   BOTONES MODERNOS
-   ========================================================= */
-.btn-primary {
-    background: var(--color-primary);
-    border-color: var(--color-primary);
-}
-
-.btn-primary:hover {
-    background: var(--color-primary-dark);
-    border-color: var(--color-primary-dark);
-}
-
-.btn-light {
-    background: var(--color-bg-light);
-    border: 1px solid var(--color-border);
-}
-
-/* =========================================================
-   CHATBOT PANEL (preparado)
-   ========================================================= */
-.chatbot-panel {
+/* ------------------------------
+   BOTÓN FLOTANTE CHAT
+------------------------------ */
+.pct-c-btn-modern {
     position: fixed;
-    top: 0;
-    right: -380px;
-    width: 380px;
-    height: 100vh;
-    background: var(--color-bg-light);
-    border-left: 1px solid var(--color-border);
-    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.12);
-    transition: right .3s ease;
-    z-index: 3000;
+    right: 25px;
+    bottom: 25px;
+    z-index: 2000;
 }
 
-.chatbot-panel.active {
-    right: 0;
+.pct-c-btn-modern button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #0d6efd;
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: .95rem;
 }
 
-/* =========================================================
-   SCROLL SUAVE
-   ========================================================= */
-.pc-sidebar::-webkit-scrollbar {
-    width: 6px;
+.trigger-icon i {
+    font-size: 1.3rem;
 }
 
-.pc-sidebar::-webkit-scrollbar-track {
-    background: var(--color-bg-soft);
+/* ------------------------------
+   OFFCANVAS CHAT
+------------------------------ */
+.offcanvas.pct-offcanvas-modern {
+    width: 400px;
+    border-left: none;
 }
 
-.pc-sidebar::-webkit-scrollbar-thumb {
-    background: var(--color-border);
-    border-radius: 6px;
+.customizer-header {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
 }
 
-/* =========================================================
+.customizer-title {
+    margin: 0;
+}
+
+.btn-close-modern {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+}
+
+/* ------------------------------
    RESPONSIVE
-   ========================================================= */
-@media (max-width: 992px) {
+------------------------------ */
+@media (max-width: 991px) {
 
     .pc-sidebar {
         transform: translateX(-100%);
@@ -209,11 +213,12 @@ a:hover {
         transform: translateX(0);
     }
 
-    .pc-container {
-        margin-left: 0;
+    .pc-header {
+        left: 0;
     }
 
-    #mobile-collapse {
-        display: inline-block;
+    .pc-container,
+    .pc-footer {
+        margin-left: 0;
     }
 }

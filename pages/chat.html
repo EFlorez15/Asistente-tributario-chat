@@ -1,6 +1,27 @@
-<h2>💬 Chat Tributario</h2>
-<div id="chatbox" class="chatbox"></div>
-<div id="chatControls">
-  <input type="text" id="userInput" placeholder="Escribe tu pregunta...">
-  <button id="sendBtn">Enviar</button>
+<!-- pages/chat.html -->
+<div class="chat-wrapper">
+  <div class="chat-header">
+    <h1>🤖 FISCO ALERTA</h1>
+    <p class="subtitle">Tu asistente tributario inteligente</p>
+  </div>
+
+  <div id="chatbox" class="chatbox">
+    <div class="msg bot">👋 ¡Hola! ¿En qué puedo ayudarte hoy?</div>
+  </div>
+
+  <div class="chat-input">
+    <input id="userInput" type="text" placeholder="Escribe tu pregunta aquí..." />
+    <button id="sendBtn" class="btn btn-primary">Enviar</button>
+  </div>
+
+  <div class="chat-suggestions">
+    <h4>Preguntas frecuentes</h4>
+    <ul>
+      <li data-pregunta="¿Qué es la UVT?">¿Qué es la UVT?</li>
+      <li data-pregunta="¿Quiénes deben practicar retención en la fuente?">¿Quiénes deben practicar retención en la
+        fuente?</li>
+      <li data-pregunta="¿Qué es el IVA?">¿Qué es el IVA?</li>
+      <li data-pregunta="¿Cuándo vence la retención en la fuente?">¿Cuándo vence la retención en la fuente?</li>
+    </ul>
+  </div>
 </div>

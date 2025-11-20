@@ -1,0 +1,126 @@
+/* Paleta corporativa FISCO ALERTA */
+:root {
+    --color-primary: #2b6cb0;
+    /* Azul institucional */
+    --color-success: #38a169;
+    /* Verde alerta */
+    --color-accent: #ed8936;
+    /* Naranja énfasis */
+    --color-neutral: #718096;
+    /* Gris neutro */
+    --color-light: #f7fafc;
+    /* Fondo claro */
+}
+
+/* Fondos */
+.bg-primary {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.bg-success {
+    background-color: var(--color-success);
+    color: white;
+}
+
+.bg-accent {
+    background-color: var(--color-accent);
+    color: white;
+}
+
+.bg-light {
+    background-color: var(--color-light);
+}
+
+/* Textos */
+.text-primary {
+    color: var(--color-primary);
+}
+
+.text-success {
+    color: var(--color-success);
+}
+
+.text-accent {
+    color: var(--color-accent);
+}
+
+.text-neutral {
+    color: var(--color-neutral);
+}
+
+/* Botones */
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.btn-primary {
+    background: var(--color-primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #1a4e8a;
+}
+
+.btn-success {
+    background: var(--color-success);
+    color: white;
+}
+
+.btn-success:hover {
+    background: #2f855a;
+}
+
+.btn-accent {
+    background: var(--color-accent);
+    color: white;
+}
+
+.btn-accent:hover {
+    background: #dd6b20;
+}
+
+/* Tarjetas / paneles */
+.card {
+    background: white;
+    border: 1px solid var(--color-neutral);
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Header corporativo */
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--color-primary);
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.app-header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.app-header .logo img {
+    height: 40px;
+}
+
+.app-header h1 {
+    font-size: 20px;
+    margin: 0;
+}
